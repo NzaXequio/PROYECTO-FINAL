@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+<div class= "container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <br> <br><br>
+            <img src="{% static 'images/iconoONG.png' %}" class="img-thumbnail" width= "400" alt="...">  
+            <br><br>
+            <div>
+                <div class="mx-auto" style="width: 430px;"> 
+                    <h2>"La casita del árbol"</h2>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+    
+            
+            <br>                        
+            <div class="mx-auto" style="width:350px;">
+            <h1>Crear una cuenta</h1> <br>
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="Nombre y apellido">Nombre y apellido</label>
+                    <input type="text" class="form-control" id="Nombre y apellido" placeholder="Ingrese su nombre y apellido"><br>
+                <div class="mb-3">
+                    <div class="mb-3">
+                        <label for="Correo electrónico" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="Correo electrónico" aria-describedby="emailHelp" placeholder="Ingrese su correo electrónico">
+                        <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+                        <br>
+                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese una contraseña"> 
+                </div>
+                
+                </div>
+                <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Repetir contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese nuevamente su contraseña">
+            </div>
+                
+                
+            </form>
+            <br>
+
+            <button type="button" class="btn btn-success">Enviar</button>
+        </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
