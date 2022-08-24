@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 {% load static %}
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -26,7 +26,7 @@
         <meta name="theme-color" content="#ffffff"/> 
 
         <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"/>
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"/> -->
     </head>
         <body>
             <header>     
@@ -38,7 +38,7 @@
                         <div class="menu">
                             <a class="menu-link" href="{% url 'index' %}">Inicio </a>
                             <a class="menu-link" href="#">Conocenos</a>
-                            <a class="menu-link" href="#">Noticias</a>
+                            <a class="menu-link" href="{% url 'noticias' %}">Noticias</a>
                             <a class="menu-link" href="#">Eventos</a>
                             <a class="menu-link" href="#"><button>Donaciones</button></a>
                             <a class="menu-link" href="#">Voluntario</a>

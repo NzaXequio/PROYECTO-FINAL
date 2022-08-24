@@ -8,3 +8,6 @@ def index(request):
 
 def registro(request):
     return render(request, 'registro.html', {})
+
+def noticias(request):
+    return render(request,'noticias.html', {})
