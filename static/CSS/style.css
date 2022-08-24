@@ -76,123 +76,6 @@ button{
 
 }
 
-/*main*/
-
-.logobanner{
-    width: 40%;
-}
-.centro-banner{
-text-align: center;
-z-index: 35;
-}
-.fotosbanner{
-    display: flex;
-    background-color:#9B9EE2;
-    justify-content: center;
-
-}
-.fotosbannergrupo1 {
-    z-index: 15;
-    align-items: center;
-    display: flex;
-    right: -500px
-}
-
-.fotosbannergrupo2{
-    z-index: 20;
-    align-items: center;
-    display: flex;
-    left: -500px
-}
-
-.triangulo1{
-    margin: 0;
-    width: 0px;
-    border: 240px solid transparent;
-    border-right-color:#9B9EE2;
-    left: -480px;
-    z-index: 25;
-
-
-}
-.triangulo2{
-    margin: 0;
-    width: 0px;
-    border: 240px solid transparent;
-    border-left-color:#9B9EE2;
-    right: -480px;
-    z-index: 30;
-}
-
-
-/*main.centro*/
-article{
-    padding: 30px 50px;
-    text-align: center;
-    margin: 30px 40px
-
-    ;
-}
-div.donacionesvoluntariado {
-    background-color: #4d51c3;
-    margin: 0
-
-    ;
-}
-div.donacionesvoluntariado button{
-    background-color: #41CBF6;
-    align-items: center
-    ;
-}
-
-
-h3{
-    background-color: #4d51c3;
-    margin: 0;
-}
-.contenedor a {
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #9B9EE2;
-    font-size: 40px;
-    padding: 40px 40px;
-}
-.contenedor p{
-    color: #000000;
-    background-color: #FFFFFF;
-    font-size: 18px;
-    padding: 10px 25px;
-    margin: 0;
-}
-
-section{
-    background-color: #9B9EE2;
-    display: column;
-    text-align: center!important;
-    align-items: flex-end;
-    margin: 0;
-    
-
-}
-
-.mensajeinicio{
-    background-color: #FFFFFF;
-}
-
-.contenedor{
-    background-color: #595fcf;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FFFFFF;
-    font-size:42px;
-    text-align: center;
-}
-
-.rectangulo{
-    
-color: #FFFFFF;
-}
 
 /* Footer*/
 div.logo-textofoot{
@@ -244,11 +127,11 @@ div.logo-textofoot{
                     font-weight: 40;
                     margin: 0px;
             }
-            .contenedor{
+            /*.contenedor{
             flex-direction: column;
             margin-right: auto;
             margin-left: auto;
-            }
+            }*/
             .itemsfooter{
                     display: column;
             }
