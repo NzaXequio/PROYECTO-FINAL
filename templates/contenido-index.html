@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block contenido %}
+
+                <div class="fotosbanner">
+
+                    <div class="fotosbannergrupo1">
+                        <img src="{% static 'images/269912780_1319474865148829_960214773882971427_n.jpg' %}" alt="fotosdeong" width="300xp" height="430px">
+                        <img src="{% static 'images/269623143_1315521715544144_211554771695803639_n.jpg' %}" alt="fotosdeong" width="300xp" height="430px">
+                        
+                            <div class="triangulo1"></div>
+                        
+                    </div>
+
+
+                    <div class="centro-banner">
+
+                        <img src="{% static 'images/iconoONG.png' %}" alt="logodeONG" class="logobanner">
+                        <h1>La casita del Árbol</h1>
+
+                    </div>
+
+
+                    <div class="fotosbannergrupo2">
+
+                            <div class="triangulo2"></div>
+
+                        <img src="{% static 'images/276193134_1374205709675744_2319099352505045171_n.jpg' %}" alt="fotosdeong" width="300xp" height="430px">
+                        <img src="{% static 'images/283176940_1416086445487670_3772168420486730647_n.jpg' %}" alt="fotosdeong" width="300xp" height="430px">
+                    </div>
+
+
+                </div>
+
+                <section>
+                    <div class="mensajeinicio">
+                        <h2>Ayudanos a cumplir nuestro objetivo</h2><img src="{% static 'images/png-transparent-heart-red-heart.png' %}" alt="corazon" width="20px">
+                        <p>Somos un grupo de personas que iniciamos un comedor con el fin de<br>
+                            realizar talleres de oficios para los chicos y con el sueño de algún día<br>
+                            poder tener un refugio. LA UNION Solidaria nos permite realizar<br>
+                            almuerzo, es un gran desafío y compromiso con los niños.</p>
+                            <a class="menu-link" href="#"><button>Conocenos</button></a>
+                            
+                    </div>
+                </section>
+
+
+                <div class="contenedor">
+                    <article class="ultimoseventos">
+                    <p>Nombre del evento</p>
+                    <img src="images/293397071_1452385101857804_652986575447189004_n.jpg" alt="evento"  width="350px">
+                    <div>
+                    <a class="eventoprincipal" href="#">Ultimos Eventos</a>
+                    </div>
+                    </article>
+
+                    <article class="mensajeninos">
+                    <h3>Marca la diferencia y<br>feliz a un niño</h3>
+                    <img src="{% static 'images/fotosnenesinicio.jpg' %}" alt="niños"  max width="500px">
+                        <div class="donacionesvoluntariado">
+                            <button>Donaciones</button>
+                            <button>Voluntario</button>
+                        </div>
+                    </article>
+                
+                    <article class="ultimasnoticias">
+                    <p>Nombre de Noticia</p>
+                    <img src="images/57257062_10213708452841229_6493822248963538944_n.jpg" alt="noticia" max width="350px">
+                    <div>
+                    <a class="noticiaprincipal" href="#">Ultimas Noticias</a>
+                    </div>
+                    </article>
+                </div>
+                <div class="rectangulo"></div>
+                
+                {% endblock %}
