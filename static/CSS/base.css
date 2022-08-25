@@ -78,11 +78,8 @@ button{
 
 
 /* Footer*/
-div.logo-textofoot{
-    display: column;
 
-}
-.itemsfooter{
+footer{
     background-color: #9B9EE2;
     color: #FFFFFF;
     display: flex;
@@ -91,6 +88,13 @@ div.logo-textofoot{
     padding-left: 50px;
     padding-right: 50px;
     margin: 0px;
+}
+
+
+.logo-textofoot img{
+    padding-left: 40px;
+    padding-top: 20px;
+
 }
 
 .logofooter{
@@ -132,7 +136,7 @@ div.logo-textofoot{
             margin-right: auto;
             margin-left: auto;
             }*/
-            .itemsfooter{
+            footer{
                     display: column;
             }
             }
