@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+from re import TEMPLATE
 import sys # librerías del sistema op que me permiten definir/modificar rutas de manera más rápida
 
 
@@ -67,10 +68,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'proyectofinalINFO.urls'
 
+TEMPLATE_DIR = os.path.join(os.path.dirname(BASE_DIR), 'templates')
+TEMPLATE_NOTICIAS = os.path.join(os.path.dirname(BASE_DIR), 'templates/noticias')
+TEMPLATE_EVENTOS = os.path.join(os.path.dirname(BASE_DIR), 'templates/eventos')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(os.path.dirname(BASE_DIR), 'templates')], 
+        'DIRS': [TEMPLATE_DIR,TEMPLATE_NOTICIAS,TEMPLATE_EVENTOS], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
