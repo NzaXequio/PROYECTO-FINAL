@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+from pickle import TRUE
 from re import TEMPLATE
 import sys # librerías del sistema op que me permiten definir/modificar rutas de manera más rápida
 
@@ -32,7 +33,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #SECRET_KEY = 'django-insecure-5lswx!kgcki*8^i!5=hzc+jk_ddkqyttnj@z!5)*!mox#o6v&4'
 SECRET_KEY = 'django-insecure-5lswx!kgcki*8^i!5=hzc+jk_ddkqyttnj@z!5)*!mox#o6v&4'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = TRUE
 # True cuando trabajo en local o servidor que no sea producción (lo que se sube a la nube)
 
 
