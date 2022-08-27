@@ -11,3 +11,6 @@ def registro(request):
 
 def noticias(request):
     return render(request,'noticias.html', {})
+
+def conocenos(request):
+    return render(request,'conocenos.html', {})
