@@ -116,3 +116,15 @@ section{
     
 color: #FFFFFF;
 }
+
+@media(max-width: 1027px) {
+    main{
+        background:#595fcf;
+        }
+            .contenedor{
+            flex-direction: column;
+            margin-right: auto;
+            margin-left: auto;
+            }
+    }
+
