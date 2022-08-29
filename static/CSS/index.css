@@ -1,12 +1,14 @@
 /*main*/
 
 .logobanner{
-    width: 40%;
+    width: 55%;
 }
 .centro-banner{
 text-align: center;
 z-index: 35;
+padding-top: 20px;
 }
+
 .fotosbanner{
     display: flex;
     background-color:#9B9EE2;

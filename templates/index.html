@@ -6,8 +6,9 @@
                 <div class="fotosbanner">
 
                     <div class="fotosbannergrupo1">
-                        <img src="{% static 'images/269912780_1319474865148829_960214773882971427_n.jpg' %}" alt="fotosdeong" width="300xp" height="430px">
                         <img src="{% static 'images/269623143_1315521715544144_211554771695803639_n.jpg' %}" alt="fotosdeong" width="300xp" height="430px">
+                        <img src="{% static 'images/269912780_1319474865148829_960214773882971427_n.jpg' %}" alt="fotosdeong" width="300xp" height="430px">
+                        
                         
                             <div class="triangulo1"></div>
                         
@@ -17,7 +18,7 @@
                     <div class="centro-banner">
 
                         <img src="{% static 'images/iconoONG.png' %}" alt="logodeONG" class="logobanner">
-                        <h1>La casita del Árbol</h1>
+                        <h2>La casita del Árbol</h2>
 
                     </div>
 
@@ -35,7 +36,7 @@
 
                 <section>
                     <div class="mensajeinicio">
-                        <h2>Ayudanos a cumplir nuestro objetivo</h2><img src="{% static 'images/png-transparent-heart-red-heart.png' %}" alt="corazon" width="20px">
+                        <p class="titulo">Ayudanos a cumplir nuestro objetivo</p><img src="{% static 'images/png-transparent-heart-red-heart.png' %}" alt="corazon" width="20px">
                         <p>Somos un grupo de personas que iniciamos un comedor con el fin de<br>
                             realizar talleres de oficios para los chicos y con el sueño de algún día<br>
                             poder tener un refugio. LA UNION Solidaria nos permite realizar<br>
@@ -68,7 +69,7 @@
                     <p>Nombre de Noticia</p>
                     <img src="images/57257062_10213708452841229_6493822248963538944_n.jpg" alt="noticia" max width="350px">
                     <div>
-                    <a class="noticiaprincipal" href="#">Ultimas Noticias</a>
+                    <a class="noticiaprincipal" href="{% url 'noticias' %}">Ultimas Noticias</a>
                     </div>
                     </article>
                 </div>
