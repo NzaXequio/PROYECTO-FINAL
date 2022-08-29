@@ -46,8 +46,10 @@
                         </div>
 
                         <div class="botoneslogin">
-                            <a href="{% url 'login' %}"> <button>Ingreso</button> </a>
-                            <a href="{% url 'registro' %}"></a><button>Registro</button>
+                            <a href="{% url 'apps.blog_auth_app:login' %}"> <button>Iniciar sesion</button> </a>
+                        <div class="botoneslogin">
+                            <a href="{% url 'apps.blog_auth_app:register' %}"> <button>Registrate</button> </a>
+    
                         </div>
             </header>
             <main>

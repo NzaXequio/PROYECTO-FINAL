@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.noticias_app',
     'apps.usuario_app',
+    'apps.blog_auth_app'
     # Agregar aplicación BLOG/EVENTOS para poder trabajar con esa app
 ]
 
@@ -66,6 +67,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'proyectofinalINFO.urls'
+
+            
+        
+
 
 TEMPLATES = [
     {
