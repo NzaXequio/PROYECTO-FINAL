@@ -39,6 +39,7 @@
 
             <div class="container-noticias">
                 <section class="textoeimagen">
+                    <div class="textoeimagendiv">
                     <article>
                         <div class="tituloytexto"> 
                         <div class="titulonoticia">titulo</div>
@@ -46,10 +47,25 @@
                     </p>
                         </div>
                     </article>
+                    
                     <div class="imagendelmedio">
                     <img src="{% static 'images/fotosnenesinicio.jpg' %}" alt="niños"  width="350px" margin="50px"  >
                     </div>
+                    </div>
+                    <div class="containercomentarios">
+                    <article class="comentarios_container">
+                        <div class="row">
+                            <div class="col-6">
+                                <form action="" class="formulario_comentarios">
+                                    <textarea name="" id=" placeholder="comentario"></textarea>
+                                    <button class="btn" type="button">Comentar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </article>
+                    </div>
                 </section>
+
 
 
                 <!-- 
@@ -83,10 +99,7 @@
                         
                     </div>
                 </aside>
-                
-            
             </div>
-
 
 
 {% endblock %}
