@@ -42,7 +42,11 @@ div {
     position: relative;
 }
 
-h1 {
+h1{
+    font-size: 15px;
+}
+
+h2 {
     font-size: 70px;
     float: unset;
     color: #FFFFFF;
@@ -74,7 +78,7 @@ header a {
 }
 
 .logo img {
-    width: 29px;
+    width: 15%;
     align-items: center;
 
 }
@@ -124,18 +128,13 @@ footer {
     padding-left: 50px;
     padding-right: 50px;
     margin: 0px;
+    text-align:center;
 }
 
 
-.logo-textofoot img {
-    padding-left: 40px;
+
+.logo-textofoot img{
     padding-top: 20px;
-
-}
-
-.logofooter {
-    align-items: center;
-    display: column;
 }
 
 @media(max-width: 1027px) {
