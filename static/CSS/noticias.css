@@ -114,6 +114,15 @@ section{
     overflow-y: scroll;
 }
 
+.imagendelmedio {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 20px;
+    height: 300px;
+
+}
+
 .titulonoticia{
     font-size: 40px;
     
@@ -142,6 +151,7 @@ aside {
 
 .noticiasaside img{
     height: 120px;
+    border-radius: 10px;
 
 
 
@@ -155,18 +165,12 @@ section.textoeimagen {
     width: 150%;
 }
 
-.imagendelmedio {
-    display: flex;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 20px;
-    height: 300px;
 
-}
 .textodeaside {
-    padding: 10px;
+    padding: 20px;
     font-size: 20px;
     font-family: sans-serif;
+    word-wrap: break-word;
 }
 
 .imagendelaside {
@@ -195,6 +199,7 @@ section.textoeimagen {
     line-height: 30px;
     border: 1px solid #4b65d1;
     margin-bottom: 20px;
+    display: column;
 
 }
 div.noticiaseimagen {
