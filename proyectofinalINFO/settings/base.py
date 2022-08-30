@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'apps.blog_auth_app'
     # Agregar aplicación BLOG/EVENTOS para poder trabajar con esa app
 ]
-
+#middleware
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
