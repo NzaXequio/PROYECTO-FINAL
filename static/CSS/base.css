@@ -115,8 +115,29 @@ button {
     border: 2px solid #000000;
 
 }
+.menubotones{
+    display: flex;
+    justify-content: space-between;
+}
+/* menu-hamburguesa*/
 
+#btn-menu{
+    display: none;
+}
 
+header label{
+    position: absolute;
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    z-index: 1;
+
+}
+header label:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
 /* Footer*/
 
 footer {
@@ -137,6 +158,7 @@ footer {
     padding-top: 20px;
 }
 
+
 @media(max-width: 1027px) {
     main {
         background: #595fcf;
@@ -147,10 +169,21 @@ footer {
         padding: 10px 0;
         margin-right: auto;
         margin-left: auto;
+        align-items: center;
     }
-
+    header label{
+        display: block;
+    }
+    .menu {
+        margin: 0 auto;
+        display: contents;
+    
+    }
     .botoneslogin {
-        padding: 1px 0;
+
+        padding-top: 30px;
+        display: contents;
+        
     }
 
     .logo {
@@ -162,7 +195,7 @@ footer {
     .menu-link {
         align-items: center;
         justify-content: space-evenly;
-        padding: 30px 5px;
+        padding: 10px 5px;
     }
 
     .menu {
@@ -170,14 +203,25 @@ footer {
         justify-content: space-between;
         font-weight: 40;
         margin: 0px;
+        display: column;
     }
 
-    /*.contenedor{
-            flex-direction: column;
-            margin-right: auto;
-            margin-left: auto;
-            }*/
-    footer {
+    
+    .menubotones{
+        display: column;
+        width: 100%;
+        background-color: #9B9EE2;
+        align-items: center;
+        transition: all .5s;
+        margin-left: -300%;
+    
+    }
+
+    #btn-menu:checked ~ .menubotones{
+        margin: 0;
+    }
+    
+    .footer {
         display: column;
     }
 }
