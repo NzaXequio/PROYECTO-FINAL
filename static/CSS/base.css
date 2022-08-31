@@ -1,14 +1,52 @@
-body{
+.barra {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #9B9EE2;
+    align-items: center;
+}
+
+.triangulo {
+    margin: 0;
+    width: 0px;
+    border: 50px solid transparent;
+    border-left-color: #ABADE0;
+}
+
+h4 {
+    display: block;
+    font-size: 2.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-family: 'Suez One';
+    font-style: normal;
+    color: #FFFFFF;
+    font-weight: 400;
+    line-height: 65px;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+body {
     margin: 0;
     background-color: #ffffff;
 }
-a{
+
+a {
     text-decoration: none;
 }
-div{
+
+div {
     position: relative;
 }
+
 h1{
+    font-size: 15px;
+}
+
+h2 {
     font-size: 70px;
     float: unset;
     color: #FFFFFF;
@@ -18,41 +56,41 @@ h1{
 }
 
 /* Header*/
-header{
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 70px;
-    background-color: #FFFFFF; 
+    height: 70px;
+    background-color: #FFFFFF;
 }
 
-header a{
+header a {
     text-decoration: none;
     color: black;
 
 }
 
 /*Headerlogo*/
-.logo{
+.logo {
     display: flex;
     align-items: center;
     font-size: 10px;
 }
 
-.logo img{
-    width: 29px;  
+.logo img {
+    width: 15%;
     align-items: center;
 
 }
 
 /*Headermenu */
-menu{
+menu {
     margin: 0 auto;
     display: flex;
 
 }
 
-.menu-link{
+.menu-link {
     align-items: center;
     justify-content: space-between;
     font-weight: 40;
@@ -60,29 +98,47 @@ menu{
 }
 
 /*Headerbotones */
-button{
-    padding: 10px 20px ;
+button {
+    padding: 10px 20px;
     border-radius: 30px;
     text-align: center;
 }
-.menu-link button{
+
+.menu-link button {
     background-color: #41CBF6;
     border: #41CBF6;
     color: #FFFFFF;
 }
-.botoneslogin button{
+
+.botoneslogin button {
     background: #FFFFFF;
     border: 2px solid #000000;
 
 }
+.menubotones{
+    display: flex;
+    justify-content: space-between;
+}
+/* menu-hamburguesa*/
 
+#btn-menu{
+    display: none;
+}
 
-/* Footer*/
-div.logo-textofoot{
-    display: column;
+header label{
+    position: absolute;
+    display: none;
+    width: 30px;
+    height: 30px;
 
 }
-.itemsfooter{
+header label:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+/* Footer*/
+
+footer {
     background-color: #9B9EE2;
     color: #FFFFFF;
     display: flex;
@@ -91,48 +147,88 @@ div.logo-textofoot{
     padding-left: 50px;
     padding-right: 50px;
     margin: 0px;
+    text-align:center;
 }
 
-.logofooter{
-    align-items: center;
-    display: column;
+
+
+.logo-textofoot img{
+    padding-top: 20px;
 }
+
 
 @media(max-width: 1027px) {
-    main{
-            background:#595fcf;
-            }
-            header{
-            flex-direction: column;
-            padding: 10px 0;
-            margin-right: auto;
-            margin-left: auto;
-            }
-            .botoneslogin{
-            padding: 1px 0;
-            }
-            .logo{
-            display: column;
-            align-items: center;
-            font-size: 10px;
-            }
-            .menu-link{
-            align-items: center;
-            justify-content: space-evenly;
-            padding: 30px 5px;
-            }
-            .menu{
-                    align-items: center;
-                    justify-content: space-between;
-                    font-weight: 40;
-                    margin: 0px;
-            }
-            /*.contenedor{
-            flex-direction: column;
-            margin-right: auto;
-            margin-left: auto;
-            }*/
-            .itemsfooter{
-                    display: column;
-            }
-            }
+    main {
+        background: #595fcf;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 10px 0;
+        margin-right: auto;
+        margin-left: auto;
+        align-items: center;
+        background-color: #ffffff;
+    }
+    header label{
+        display: block;
+        right: 0;
+        z-index: 101;
+        top: 0;
+    }
+    .botoneslogin {
+
+        padding-top: 30px;
+        display: contents;
+        
+    }
+
+    .logo {
+
+        align-items: center;
+        font-size: 20%;
+        margin-right: 80%;
+        white-space: nowrap;
+    }
+    .logo img {
+        min-width: 40%;
+        align-items: center;
+    
+    }
+    .menu-link {
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 10px 5px;
+    }
+
+    .menu {
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 40;
+        margin: 0px;
+        display: contents;
+    }
+
+    
+    .menubotones{
+        display: grid;
+        position: absolute;
+        width: 100%;
+        background-color: #7377d1;
+        align-items: center;
+        transition: all .5s;
+        margin-top: -300%;
+        z-index: 100;
+        top: 0px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #btn-menu:checked ~ .menubotones{
+        margin: 0;
+    }
+    
+    .footer {
+        display: column;
+    }
+}
