@@ -6,8 +6,8 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html', {})
 
-def registro(request):
-    return render(request, 'registro.html', {})
+#def registro(request):
+    #return render(request, 'registro.html', {})
 
 def noticias(request):
     return render(request,'noticias.html', {})
