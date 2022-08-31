@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.noticias_app',
     'apps.usuario_app',
+    'apps.eventos_app',
     # Agregar aplicación BLOG/EVENTOS para poder trabajar con esa app
 ]
 

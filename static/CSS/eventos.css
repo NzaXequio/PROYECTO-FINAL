@@ -1,0 +1,11 @@
+.contenido_eventos{
+    display: flex;
+}
+.otros_eventos{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    width: 200px;
+    height: 200px;
+    float: left;
+
+}
