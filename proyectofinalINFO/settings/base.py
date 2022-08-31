@@ -54,10 +54,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.noticias_app',
     'apps.usuario_app',
+
+    'apps.blog_auth_app'
+=======
     'apps.eventos_app',
+
     # Agregar aplicación BLOG/EVENTOS para poder trabajar con esa app
 ]
-
+#middleware
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -70,9 +74,15 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'proyectofinalINFO.urls'
 
+
+            
+        
+
+=======
 TEMPLATE_DIR = os.path.join(os.path.dirname(BASE_DIR), 'templates')
 TEMPLATE_NOTICIAS = os.path.join(os.path.dirname(BASE_DIR), 'templates/noticias')
 TEMPLATE_EVENTOS = os.path.join(os.path.dirname(BASE_DIR), 'templates/eventos')
+
 
 TEMPLATES = [
     {
