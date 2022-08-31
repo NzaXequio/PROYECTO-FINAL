@@ -88,17 +88,20 @@ body{
 
 article{
     display: column;
+
 }
 
 
 section{ 
+    display: column;
     width: 85%;
-    margin: 20px;
+    /*margin: 20px;*/
 }
 
 .container-noticias {
-    display: flex !important;
-    padding: 50px;
+    display: flex ;
+    padding: 10px;
+
 }
 
 .tituloytexto {
@@ -107,24 +110,50 @@ section{
     padding-right: 10px;
     margin: 20px;
     background-color: #fff;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.imagendelmedio {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 20px;
+    height: 300px;
+
+}
+
+.titulonoticia{
+    font-size: 40px;
+    
 }
 
 aside {
     display: column;
-    padding: 20px;
+    padding: 10px;
     justify-content: right;
     align-items: center;
     justify-content: space-between;
+    /*margin: 20px;*/
+    
 
 }
 
 .noticiasaside {
     display: flex;
+    height: 150px;
+    padding-right: 10px;
+    background-color: #F7F4F4;
+    border: 10px solid   #fff;
+    border-radius: 20px;
+
 }
 
 .noticiasaside img{
-    height: 100px;
-    padding-right: 10px;
+    height: 120px;
+    border-radius: 10px;
+
+
 
 }
 
@@ -133,6 +162,102 @@ p {
 }
 
 section.textoeimagen {
+    width: 150%;
+}
+
+
+.textodeaside {
+    padding: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    max-height: 90%;
+    overflow: hidden;
+    
+}
+
+.imagendelaside {
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    
+}
+div.noticiaseimagen {
     display: flex;
 
+
 }
+
+.textoimagenycomentarios{
+    display: column;
+}
+
+.textoeimagendiv {
+    display: flex;
+}
+
+
+.comentarios {
+    margin: 20px 0;
+
+}
+.boxtextcoments {
+    width: 100%;
+    height: 84px;
+    max-width: 100%;
+    min-width: 600px;
+    min-height: 84px;
+    max-height: 100%;
+    padding: 10px;
+    line-height: 30px;
+    border: 1px solid #7890ee;
+    margin-bottom: 20px;
+    margin-bottom:28px ;
+
+}
+
+
+article.comentarios_container {
+    padding: 20px;
+    
+    
+}
+
+.boxtextcoments {
+    width: auto;
+    height: auto;
+    padding: 15px;
+    border-radius: 20px;
+
+}
+
+.btn {
+    box-shadow: 4px 4px 7px 1px rgb(0 0 0 / 30%);
+    background: left #7890ee #9badf4;
+}
+.boxcomentarioshechos {
+    width: auto;
+    height: auto;
+    padding: 15px;
+    border-radius: 20px;
+    max-width: 100%;
+    min-width: 600px;
+    min-height: 84px;
+    max-height: 100%;
+    padding: 10px;
+    line-height: 30px;
+    border: 1px solid #7890ee;
+    margin-bottom: 20px;
+    margin-bottom:28px ;
+
+}
+
+@media(max-width: 1027px)  {
+    .container-noticias{
+        display: column;
+    }
+    }
