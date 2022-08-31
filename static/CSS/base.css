@@ -60,7 +60,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 70px;
+    height: 70px;
     background-color: #FFFFFF;
 }
 
@@ -130,8 +130,6 @@ header label{
     display: none;
     width: 30px;
     height: 30px;
-    padding: 10px;
-    z-index: 1;
 
 }
 header label:hover{
@@ -170,14 +168,13 @@ footer {
         margin-right: auto;
         margin-left: auto;
         align-items: center;
+        background-color: #ffffff;
     }
     header label{
         display: block;
-    }
-    .menu {
-        margin: 0 auto;
-        display: contents;
-    
+        right: 0;
+        z-index: 101;
+        top: 0;
     }
     .botoneslogin {
 
@@ -187,11 +184,17 @@ footer {
     }
 
     .logo {
-        display: column;
-        align-items: center;
-        font-size: 10px;
-    }
 
+        align-items: center;
+        font-size: 20%;
+        margin-right: 80%;
+        white-space: nowrap;
+    }
+    .logo img {
+        min-width: 40%;
+        align-items: center;
+    
+    }
     .menu-link {
         align-items: center;
         justify-content: space-evenly;
@@ -203,18 +206,22 @@ footer {
         justify-content: space-between;
         font-weight: 40;
         margin: 0px;
-        display: column;
+        display: contents;
     }
 
     
     .menubotones{
-        display: column;
+        display: grid;
+        position: absolute;
         width: 100%;
-        background-color: #9B9EE2;
+        background-color: #7377d1;
         align-items: center;
         transition: all .5s;
-        margin-left: -300%;
-    
+        margin-top: -300%;
+        z-index: 100;
+        top: 0px;
+        text-align: center;
+        justify-content: center;
     }
 
     #btn-menu:checked ~ .menubotones{
