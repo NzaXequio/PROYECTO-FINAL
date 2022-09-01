@@ -109,7 +109,9 @@ button {
     border: #41CBF6;
     color: #FFFFFF;
 }
-
+.botoneslogin{
+    display: flex;
+}
 .botoneslogin button {
     background: #FFFFFF;
     border: 2px solid #000000;

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+{ % for noticia in noticias % }
+            <div class="container-noticias">
+                <section class="textoeimagen">
+                    <div class="textoeimagendiv">
+                    <article>
+                        <div class="tituloytexto"> 
+                        <div class="titulonoticia">
+                            <p>{{noticia.titulo}}</p>
+                        </div>
+                        <p>{{noticia.contenido}}</p>
+                        </div>
+                    </article>
+
+
+
+                    <div class="imagendelmedio">
+                    <img src="{{MEDIA_ROOT}}{{noticia.img}}" alt="niños"  width="350px" margin="50px">
+                    </div>
+                </div>
+                
+                </div>
+                    </div>
+{ % endfor % } 
+
+{% endblock %}
