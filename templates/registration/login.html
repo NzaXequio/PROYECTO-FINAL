@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block contenido %}
+
 <section class="container" style="margin-top: 5%;">
     <form method="POST" action="{% url 'apps.blog_auth_app:login' %}" class="form-signin">
         {% csrf_token %}

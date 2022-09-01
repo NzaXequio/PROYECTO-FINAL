@@ -1,4 +1,5 @@
-<form method = 'post'>
+{% comment %}
+ <form method = 'post'>
     {% csrf_token %}
     <div class="row mb-3">
       <label for="inputEmail3" class="col-sm-2 col-form-label">Nombre de Usuario</label>
@@ -13,4 +14,5 @@
       </div>
     </div>
     <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-</form>
+</form> 
+{% endcomment %}
