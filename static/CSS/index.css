@@ -59,7 +59,9 @@ article{
 }
 div.donacionesvoluntariado {
     background-color: #4d51c3;
-    margin: 0
+    margin: 0;
+    top: -120px;
+    padding: 30px;
 
     ;
 }

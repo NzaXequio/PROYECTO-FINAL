@@ -1,4 +1,5 @@
 from datetime import datetime
+from email.mime import image
 from django.db import models
 from django.utils import timezone
 
@@ -10,7 +11,7 @@ class Noticia(models.Model):
     autor = models.ForeignKey('usuario_app.Usuario', on_delete = models.CASCADE)
     titulo = models.CharField(max_length=255)
     contenido = models.TextField()
-    img = models.ImageField(null=True, blank=True, help_text='Seleccione una imagen para mostrar') #carpeta img/noticias  uploade_to = 'img/noticias',
+    img = models.ImageField(null=True, blank=True, upload_to='img/noticias',help_text="Seleccione una imagen para mostrar")
     creado = models.DateTimeField(default=timezone.now)
     modificado = models.DateTimeField(auto_now=True)
     publicado = models.DateTimeField(blank=True, null=True)
