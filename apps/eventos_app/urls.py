@@ -1,6 +1,4 @@
-# Tipo el ÍNDICE
-"""proyectofinalINFO URL Configuration
-
+"""proyectofinalInfo URL Configuration
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
 Examples:
@@ -16,21 +14,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include,path
-from django.urls import re_path as url
+from django.urls import re_path
 from django.conf.urls.static import static
 from django.conf import settings
-from apps.noticias_app import views
 from apps.eventos_app import views
 
-
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
-    path('registration/', include('apps.blog_auth_app.urls')),
-    path('noticias/', views.noticias, name='noticias'),
-    path('conocenos/', views.conocenos, name='conocenos'),
+    #path('evento/<int:id>/', views.eventos, name='eventos'),
     path('eventos/', views.eventos, name='eventos' ),
-    url('noticia/', include('apps.noticias_app.urls')),
-    url('evento/', include('apps.eventos_app.urls')),
-    #path('noticia/<int:id>/', views.detallenoticia, name='noticiasdetalle')
-] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT, show_indexes=True)
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, show_indexes=True)

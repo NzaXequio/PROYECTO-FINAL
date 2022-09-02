@@ -1,3 +1,4 @@
+
 .barra {
     display: flex;
     width: 100%;
@@ -30,6 +31,7 @@ h4 {
 }
 
 body {
+    font-size: 20px;
     margin: 0;
     background-color: #ffffff;
 }
@@ -109,7 +111,9 @@ button {
     border: #41CBF6;
     color: #FFFFFF;
 }
-
+.botoneslogin{
+    display: flex;
+}
 .botoneslogin button {
     background: #FFFFFF;
     border: 2px solid #000000;
@@ -149,6 +153,7 @@ footer {
     margin: 0px;
     text-align:center;
 }
+
 
 
 

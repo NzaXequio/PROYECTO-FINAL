@@ -17,6 +17,7 @@ import os
 from pickle import TRUE
 from re import TEMPLATE
 import sys
+
 from telnetlib import LOGOUT # librerías del sistema op que me permiten definir/modificar rutas de manera más rápida
 
 
@@ -52,7 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.noticias_app',
     'apps.blog_auth_app',
-    'apps.eventos_app'
+    'apps.eventos_app',
 
     # Agregar aplicación BLOG/EVENTOS para poder trabajar con esa app
 ]
@@ -149,6 +150,7 @@ MEDIA_ROOT = (os.path.join(os.path.dirname(BASE_DIR), 'media'))
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 LOGIN_URL = '/login' 
 LOGIN_REDIRECT_URL = '/'
