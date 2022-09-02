@@ -12,11 +12,11 @@ from django.views.generic import( CreateView)
 # Create your views here.
 def index(request):
     #texto = {'mensaje_texto': 'Esta es mi primer pagina :)'}
-    ultimasnoticias = Noticia.objects.all().order_by('creado').reverse()[:3]
-    context = {
-        'noticiasdestacadas':ultimasnoticias
-    }
-    return render(request, 'index.html',context)
+    #ultimasnoticias = Noticia.objects.all().order_by('creado').reverse()[:3]
+    #context = {
+    #    'noticiasdestacadas':ultimasnoticias
+    #}
+    return render(request, 'index.html',)
 
 def nosotros(request):
     return render(request, 'nosotros.html',{})
@@ -24,8 +24,10 @@ def nosotros(request):
 def noticias(request):
     lista_noticias = Noticia.objects.all().order_by('creado')
     context = {
-        "noticias": lista_noticias,
-        "MEDIA_ROOT": 'media/img/noticias/'
+        "noticia": lista_noticias,
+        # "MEDIA_ROOT": 'media/img/noticias/'
+        #"MEDIA_ROOT": 'media/img/noticias/'
+        #\media\img\noticias\
     }
     return render(request, 'noticias.html',context)
 
@@ -41,7 +43,6 @@ def detallenoticia(request,id):
         "MEDIA_ROOT": 'media/img/noticias/'
         
     }
-
     return render(request,'detalle-noticia.html',context)
 
 
