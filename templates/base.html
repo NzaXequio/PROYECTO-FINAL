@@ -56,12 +56,22 @@
                             
                         </div>
 
-                        <div class="botoneslogin">
-                            <a href="{% url 'apps.blog_auth_app:login' %}"> <button>Iniciar sesion</button> </a>
-                        <div class="botoneslogin">
-                            <a href="{% url 'apps.blog_auth_app:register' %}"> <button>Registrate</button> </a>
-    
+                        {% if User.is_authenticated %}
+                        <div class= "botoneslogin" style="margin-top: 1%;" >  
+                            <h5>Hola {{user.username}}</h5>
                         </div>
+                        <div class="botoneslogin" style="margin-left:2% ;">
+                            <a class="btn btn-primary" href="{% url 'apps.blog_auth_app:logout' %}">Cerrar sesión</a>
+                        </div>
+                    {% else %}
+                        <div class="botoneslogin">
+                            <a href="{% url 'apps.blog_auth_app:login' %}"> <button>Iniciar sesión</button> </a>
+                        </div>
+                        <div class="botoneslogin">
+                            <a href="{% url 'apps.blog_auth_app:register' %}"> <button>Registrate</button> </a>   
+                        </div>
+                    {% endif %}
+
                     </div>
                 
 
