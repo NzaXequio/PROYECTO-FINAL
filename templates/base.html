@@ -55,8 +55,7 @@
                             <a class="menu-link" href="#">Voluntario</a>
                             
                         </div>
-
-                        {% if User.is_authenticated %}
+                    {% if user.is_authenticated %}
                         <div class= "botoneslogin" style="margin-top: 1%;" >  
                             <h5>Hola {{user.username}}</h5>
                         </div>
@@ -71,7 +70,6 @@
                             <a href="{% url 'apps.blog_auth_app:register' %}"> <button>Registrate</button> </a>   
                         </div>
                     {% endif %}
-
                     </div>
                 
 

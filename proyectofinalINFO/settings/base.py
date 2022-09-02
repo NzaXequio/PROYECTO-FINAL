@@ -16,7 +16,8 @@ from pathlib import Path
 import os
 from pickle import TRUE
 from re import TEMPLATE
-import sys 
+import sys
+
 from telnetlib import LOGOUT # librerías del sistema op que me permiten definir/modificar rutas de manera más rápida
 
 
@@ -41,6 +42,7 @@ DEBUG = TRUE
 ALLOWED_HOSTS = []
 #También redefinida en producción, URLs/dominio del sitio
 
+# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -69,11 +71,10 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'proyectofinalINFO.urls'
 
 
-
 TEMPLATE_DIR = os.path.join(os.path.dirname(BASE_DIR), 'templates')
 TEMPLATE_NOTICIAS = os.path.join(os.path.dirname(BASE_DIR), 'templates/noticias')
 TEMPLATE_EVENTOS = os.path.join(os.path.dirname(BASE_DIR), 'templates/eventos')
-
+TEMPLATE_AUTH = os.path.join(os.path.dirname(BASE_DIR),'templates/registration')
 
 TEMPLATES = [
     {
@@ -149,7 +150,6 @@ MEDIA_ROOT = (os.path.join(os.path.dirname(BASE_DIR), 'media'))
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
 
 LOGIN_URL = '/login' 
