@@ -1,12 +1,14 @@
 /*main*/
 
 .logobanner{
-    width: 40%;
+    width: 55%;
 }
 .centro-banner{
 text-align: center;
 z-index: 35;
+padding-top: 20px;
 }
+
 .fotosbanner{
     display: flex;
     background-color:#9B9EE2;
@@ -99,6 +101,7 @@ section{
 
 .mensajeinicio{
     background-color: #FFFFFF;
+    padding: 10px;
 }
 
 .contenedor{
@@ -115,3 +118,15 @@ section{
     
 color: #FFFFFF;
 }
+
+@media(max-width: 1027px) {
+    main{
+        background:#595fcf;
+        }
+            .contenedor{
+            flex-direction: column;
+            margin-right: auto;
+            margin-left: auto;
+            }
+    }
+
