@@ -3,18 +3,11 @@
     justify-content: space-around;
     padding: 40px;
 }
-.otros_eventos{
-    display: grid;
-    grid-template-columns: 200px 200px;
-    width: 200px;
-    height: 200px;
-    float: left;
-    padding: 20px;
 
-}
 section{
-    align-items: right;
+    align-items: center;
     padding: 30px 30px;
+    justify-content: center;
 }
 p{
     padding: 20px;
