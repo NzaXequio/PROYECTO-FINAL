@@ -26,6 +26,7 @@ def conocenos(request):
 def eventos(request):
     lista_eventos = Evento.objects.all().order_by('creado')
     context = {
-        "evento": lista_eventos,
+        "eventos": lista_eventos,
+        #"MEDIA_ROOT": 'media/img/noticias/'
     }
-    return render(request,'eventos.html', {})
+    return render(request,'eventos.html', context)

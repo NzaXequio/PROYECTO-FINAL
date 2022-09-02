@@ -71,6 +71,9 @@ div.donacionesvoluntariado button{
     ;
 }
 
+article.mensajeninos h3 {
+    position: relative;
+    top: 30px; }
 
 h3{
     background-color: #4d51c3;
