@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block contenido %}
+
 <link rel="stylesheet" href="{% static 'CSS/eventos.css' %}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,17 +13,17 @@
                 <div class="triangulo"></div>
                 <h4>Eventos</h4>
                 </div>
-                { % for evento in eventos % }
+                {% for evento in eventos %}
                 <div class="contenido_eventos">
                     <section>
                         <article>
-                            <img src="{{MEDIA_ROOT}}/img/eventos/{{evento.img}}" alt="evento"  width="450px">
+                            <img src="{{MEDIA_ROOT}}/{{ evento.img }}" alt="evento"  width="450px">
                             <p>
                                 {{evento.titulo}} 
                             </p>
                         </article> 
                     </section>
-                    { % endfor % } 
+                    {% endfor %} 
                     <section>
                         <article>
                             <div class="otros_eventos">

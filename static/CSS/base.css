@@ -86,10 +86,10 @@ header a {
 }
 
 /*Headermenu */
-menu {
+.menu {
     margin: 0 auto;
     display: flex;
-
+    right: 20%;
 }
 
 .menu-link {

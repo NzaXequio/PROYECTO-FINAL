@@ -38,7 +38,7 @@ def detallenoticia(request,id):
     except Noticia.DoesNotExist:
         raise Http404('La Noticia solicitada no existe')
     context = {
-        "noticia": datanoticia,
+        "noticias": datanoticia,
         "comentarios":lista_comentarios,
         "MEDIA_ROOT": 'media/img/noticias/'
         
