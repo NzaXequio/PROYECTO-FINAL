@@ -8,7 +8,7 @@ class Categoria(models.Model):
 
 
 class Evento(models.Model):
-    autor = models.ForeignKey('usuario_app.Usuario', on_delete = models.CASCADE)
+    autor = models.ForeignKey('auth.User', on_delete = models.CASCADE)
     titulo = models.CharField(max_length=255)
     img = models.ImageField(null=True, blank=True, upload_to='img/eventos',help_text="Seleccione una imagen para mostrar")
     creado = models.DateTimeField(default=timezone.now)
