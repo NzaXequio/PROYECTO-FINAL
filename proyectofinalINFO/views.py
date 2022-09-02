@@ -14,3 +14,6 @@ def noticias(request):
 
 def conocenos(request):
     return render(request,'conocenos.html', {})
+    
+def eventos(request):
+    return render(request,'eventos.html', {})

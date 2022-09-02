@@ -128,5 +128,19 @@ color: #FFFFFF;
             margin-right: auto;
             margin-left: auto;
             }
+            .fotosbannergrupo1 {
+                display: none;
+            }
+            
+            .fotosbannergrupo2{
+                display: none;
+            }
+            
+            .triangulo1{
+                display: none;
+            }
+            .triangulo2{
+                display: none;
+            }
     }
 

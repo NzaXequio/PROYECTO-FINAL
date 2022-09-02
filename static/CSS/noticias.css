@@ -80,7 +80,6 @@ h2 {
 
 body{
     font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fff;
 }
 
@@ -99,7 +98,7 @@ section{
 }
 
 .container-noticias {
-    display: flex !important;
+    display: flex ;
     padding: 10px;
 
 }
@@ -162,15 +161,18 @@ p {
 }
 
 section.textoeimagen {
-    width: 150%;
+    width: 100%;
 }
 
 
 .textodeaside {
-    padding: 20px;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 14px;
     font-family: sans-serif;
     word-wrap: break-word;
+    max-height: 90%;
+    overflow: hidden;
+    
 }
 
 .imagendelaside {
@@ -182,25 +184,6 @@ section.textoeimagen {
     padding-right: 10px;
     border-radius: 10px;
     
-}
-
-.comentarios {
-    margin: 20px 0;
-
-}
-.form_comentarios {
-    width: 100%;
-    height: 90px;
-    /*max-width: 100%;
-    min-width: 100%;*/
-    min-height: 90px;
-    max-height: 300px;
-    padding: 10px;
-    line-height: 30px;
-    border: 1px solid #4b65d1;
-    margin-bottom: 20px;
-    display: column;
-
 }
 div.noticiaseimagen {
     display: flex;
@@ -215,3 +198,69 @@ div.noticiaseimagen {
 .textoeimagendiv {
     display: flex;
 }
+
+
+.comentarios {
+    margin: 20px 0;
+
+}
+.boxtextcoments {
+    width: 100%;
+    height: 84px;
+    max-width: 90%;
+    min-width: 300px;
+    min-height: 84px;
+    max-height: 50%;
+    padding: 10px;
+    line-height: 30px;
+    border: 1px solid #7890ee;
+    margin-bottom: 20px;
+    margin-bottom:28px ;
+
+}
+
+
+article.comentarios_container {
+    padding: 20px;
+    
+    
+}
+
+.boxtextcoments {
+    width: auto;
+    height: auto;
+    padding: 15px;
+    border-radius: 20px;
+
+}
+
+.btn {
+    box-shadow: 4px 4px 7px 1px rgb(0 0 0 / 30%);
+    background: left #7890ee #9badf4;
+}
+.boxcomentarioshechos {
+    width: auto;
+    height: auto;
+    padding: 15px;
+    border-radius: 20px;
+    max-width: 100%;
+    min-width: 600px;
+    min-height: 84px;
+    max-height: 100%;
+    padding: 10px;
+    line-height: 30px;
+    border: 1px solid #7890ee;
+    margin-bottom: 20px;
+    margin-bottom:28px ;
+
+}
+
+@media(max-width: 1027px)  {
+    .container-noticias{
+        display: contents;
+    }
+    .textoeimagendiv {
+        display: contents;
+    }
+    
+    }
