@@ -80,6 +80,7 @@ ROOT_URLCONF = 'proyectofinalINFO.urls'
 TEMPLATE_DIR = os.path.join(os.path.dirname(BASE_DIR), 'templates')
 TEMPLATE_NOTICIAS = os.path.join(os.path.dirname(BASE_DIR), 'templates/noticias')
 TEMPLATE_EVENTOS = os.path.join(os.path.dirname(BASE_DIR), 'templates/eventos')
+TEMPLATE_AUTH = os.path.join(os.path.dirname(BASE_DIR),'templates/registration')
 
 
 TEMPLATES = [
