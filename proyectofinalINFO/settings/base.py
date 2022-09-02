@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'apps.noticias_app',
     'apps.usuario_app',
     'apps.blog_auth_app',
-    'apps.eventos_app'
+    'apps.eventos_app',
 
     # Agregar aplicación BLOG/EVENTOS para poder trabajar con esa app
 ]

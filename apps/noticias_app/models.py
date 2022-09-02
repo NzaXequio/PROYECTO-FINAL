@@ -12,6 +12,7 @@ class Noticia(models.Model):
     titulo = models.CharField(max_length=255)
     contenido = models.TextField()
     img = models.ImageField(null=True, blank=True, upload_to='img/noticias',help_text="Seleccione una imagen para mostrar")
+    # img = models.ImageField(null=True, blank=True, upload_to='img/eventos',help_text="Seleccione una imagen para mostrar")
     creado = models.DateTimeField(default=timezone.now)
     modificado = models.DateTimeField(auto_now=True)
     publicado = models.DateTimeField(blank=True, null=True)
@@ -26,6 +27,7 @@ class Noticia(models.Model):
 
 # cuando se crea una nueva tabla acá, ejecutar py manage.py makemigrations noticias_app 
 # luego py manage.py migrate
+
 
 class Comentarios(models.Model):
     noticia = models.ForeignKey('Noticia', related_name = 'comentarios', on_delete=models.CASCADE)
