@@ -1,6 +1,16 @@
 from .base import *
+import dj_database_url
+import django_heroku
+
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+
+
 
 DEBUG = False
+
+DEBUG_PROPAGATE_EXEPTIONS = True
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 # No subir en true porque puede mostrar la ruta exacta del archivo de configuración
 
 # Database
@@ -8,8 +18,25 @@ DEBUG = False
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), #ponemos los datos de nuestra base de datos para conectar
-        'USER': ''
+        'ENGINE': 'django.db.backends.postgresql__psycopg2',
+        'NAME': 'django-pbpostgres',
+        'USER': 'name',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
+
+db_from_env= dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+django_heroku.settings(locals())
+STATICFILES_STORAGE= 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE= 'whitenoise.storage.CompressedStaticFilesStorage'
+
+
+STATIC_URL = 'https://django-pbpostgres.herokuapp.com/static/'
+MEDIA_URL = 'https://django-pbpostgres.herokuapp.com/media/'
+
+
+
+
