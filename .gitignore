@@ -1,3 +1,6 @@
 proyectofinalINFO/settings/local.py
 proyectofinalINFO/settings/secret.key.txt
 *.pyc
+PROYECTO-FINAL\proyectofinalINFO\__pycache__
+PROYECTO-FINAL\proyectofinalINFO\settings\__pycache__
+PROYECTO-FINAL\db.sqlite3
