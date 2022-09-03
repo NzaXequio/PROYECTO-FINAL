@@ -51,8 +51,8 @@
                             <a class="menu-link" href="{% url 'conocenos' %}">Conocenos</a>
                             <a class="menu-link" href="{% url 'noticias' %}">Noticias</a>
                             <a class="menu-link" href="{% url 'eventos' %}">Eventos</a>
-                            <a class="menu-link" href="#"><button>Donaciones</button></a>
-                            <a class="menu-link" href="#">Voluntario</a>
+                            <a class="menu-link" href="{% url 'conocenos' %}"><button>Donaciones</button></a>
+                            <a class="menu-link" href="{% url 'conocenos' %}">Voluntario</a>
                             
                         </div>
                     {% if user.is_authenticated %}
