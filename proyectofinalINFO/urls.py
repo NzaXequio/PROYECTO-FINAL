@@ -26,7 +26,7 @@ from apps.eventos_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('registration', include('apps.blog_auth_app.urls')),
+    path('registration/', include('apps.blog_auth_app.urls')),
     #path('noticias', views.noticias, name='noticias'),
     path('conocenos', views.conocenos, name='conocenos'),
     path('eventos', views.eventos, name='eventos' ),

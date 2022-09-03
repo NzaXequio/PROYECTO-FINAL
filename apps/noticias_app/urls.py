@@ -20,9 +20,10 @@ from django.conf import settings
 from apps.noticias_app import views
 
 urlpatterns = [
-    path('<int:id>', views.detallenoticia, name='detalle-noticia'),
+    path('/<int:id>', views.detallenoticia, name='detalle-noticia'),
     #path("noticias/new", views.CrearNoticiaView.as_view(), name='CrearNoticiaView'),
     #path('comentario/<int:id>/approve', views.comment_approve, name='comment_approve'),
     #path('comentario/<int:id>/remove', views.comment_remove, name='comment_remove'),
     path('', views.noticias, name='noticias'),
-]
+    path('', views.login, name='login'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, show_indexes=True) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT, show_indexes=True)
