@@ -48,11 +48,12 @@
                         <div class="titulonoticia">
                             <p>{{noticia.titulo}}</p>
                         </div>
-                        <p>{{noticia.contenido}}</p>
+                        <p>{{noticia.contenido|slice:":100"}}</p>
+                        <a href="noticias/{{noticia.id}}">Leer más</a>
                         </div>
                     </article>
                     <div class="imagendelmedio">
-                    <img src="{{MEDIA_ROOT}}/{{noticia.img}}" alt="niños"  width="350px" margin="50px">
+                    <img src="{{MEDIA_ROOT}}/{{ noticia.img }}" alt="niños"  width="350px" margin="50px">
                     </div>
                     </div>
                     {% endfor %} 
@@ -62,11 +63,17 @@
                         -->
                         <article>
                         <div class="mediabody">
+                            {% for comentario in comentarios %}
                             <p class="nombre"> Jhon Doe <span>8:39, Hoy </span></p>
                             <p class="comentarioo"> L¿Quienes somos? Somos una familia, grande muy grande. El comedor y merendero "La Casita del Árbol es una familia grande, donde compartimos diariamente alegrías, tristezas, juegos y risas pero sobre todo somos un grupo de personas comprometidas que dedicamos gran parte de nuestros días a mejorar o intentar mejorar la calidad de vida de muchos niños. Hace 5 años, tomamos la iniciativa de servir la merienda a los chicos de nuestro barrio ya que veíamos la gran necesidad que nos rodeaba. Comenzamos sirviendo la merienda una vez a la semana a alrededor de 30 chicos del barrio, luego la cantidad de niños fue aumentando, nos vimos obligados a aumentar la cantidad de dias de merienda, lo que hoy nos lleva a contarte que servimos almuerzo y merienda de lunes a sábado a mas de 60 niños, de este barrio y también de barrios aledaños.</p>
                         </div>
                         </articulo>
-
+                        {% for comentario in comentarios %}
+                        <div class="Comentario">
+                        <p class="comentario-header">{{ comentario.autor}}<span class="Fecha"> {{ comentario.creado}}</span></p>
+                        <p>{{ comentario.cuerpo_comentario}}</p>
+                        </div>
+                        {% endfor %}
                         <article class="comentarios_container">
                         <div class="row">
                             <div class="col-20">

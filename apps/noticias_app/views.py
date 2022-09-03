@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 #from .forms import NoticiaForm, CommentarioForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import( CreateView)
+from .forms import FormComment
 
 # Create your views here.
 def index(request):
@@ -24,26 +25,38 @@ def nosotros(request):
 def noticias(request):
     lista_noticias = Noticia.objects.all().order_by('creado')
     context = {
-        "noticia": lista_noticias,
-        # "MEDIA_ROOT": 'media/img/noticias/'
-        #"MEDIA_ROOT": 'media/img/noticias/'
-        #\media\img\noticias\
+        "noticias": lista_noticias,
     }
-    return render(request, 'noticias.html',context)
+    return render(request,'noticias.html', context)
 
-def detallenoticia(request,id):
+
+
+def detallenoticia(request, id):
     try:
-        datanoticia = Noticia.objects.get(id=id)
+        noticia = Noticia.objects.get(id=id)
         lista_comentarios = Comentarios.objects.filter(aprobado=True)
     except Noticia.DoesNotExist:
-        raise Http404('La Noticia solicitada no existe')
+        raise Http404('La Noticia solicitada no existe')\
+    
+    form = FormComment()
+    
+    if (request.method == "POST") and (request.user.id != None):
+        form = FormComment(request.POST)
+        if form.is_valid():
+            comment = Comentarios(
+                autor_id = request.user.id,
+                cuerpo_comentario=form.cleaned_data["cuerpo_comentario"],
+                noticia=noticia
+            )
+            comment.save()
+            return redirect("detalle-noticia", id=noticia.id)
+
     context = {
-        "noticias": datanoticia,
-        "comentarios":lista_comentarios,
-        "MEDIA_ROOT": 'media/img/noticias/'
-        
+        "form":form,
+        "noticia": noticia,
+        "comentarios": lista_comentarios
     }
-    return render(request,'detalle-noticia.html',context)
+    return render(request, 'detalle-noticia.html', context)
 
 
 def conocenos(request):
@@ -51,3 +64,14 @@ def conocenos(request):
 
 def eventos(request):
     return render(request,'eventos.html', {})
+
+
+@login_required
+def commentAproved(request, id):
+    try:
+        comentario = Comentarios.objects.get(id=id)
+    except Comentarios.DoesNotExist:
+        raise Http404("Inexistente")
+
+    comentario.approve()
+    return redirect("detalle-noticia", id=comentario.noticia.id)

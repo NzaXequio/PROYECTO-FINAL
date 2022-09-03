@@ -53,9 +53,9 @@ class ComentariosAdmin(admin.ModelAdmin):
 
     search_fields = ('autor', 'cuerpo_comentario')
 
-    actions= ['aprobar_comentarios']
+    actions= ['aprobarComentario']
 
-    def aprobar_comentarios(self,request,queryset):
+    def aprobarComentario(self,request,queryset):
         queryset.update(aprobado=True)
 
 admin.site.register(Comentarios,ComentariosAdmin)

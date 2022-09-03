@@ -21,5 +21,5 @@ from apps.eventos_app import views
 
 urlpatterns = [
     #path('evento/<int:id>/', views.eventos, name='eventos'),
-    path('eventos/', views.eventos, name='eventos' ),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, show_indexes=True)
+    path('', views.eventos, name='eventos' ),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, show_indexes=True) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT, show_indexes=True)

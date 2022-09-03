@@ -26,11 +26,11 @@ from apps.eventos_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('registration/', include('apps.blog_auth_app.urls')),
-    path('noticias/', views.noticias, name='noticias'),
-    path('conocenos/', views.conocenos, name='conocenos'),
-    path('eventos/', views.eventos, name='eventos' ),
-    url('noticia/', include('apps.noticias_app.urls')),
-    url('evento/', include('apps.eventos_app.urls')),
+    path('registration', include('apps.blog_auth_app.urls')),
+    #path('noticias', views.noticias, name='noticias'),
+    path('conocenos', views.conocenos, name='conocenos'),
+    path('eventos', views.eventos, name='eventos' ),
+    path('noticias', include('apps.noticias_app.urls')),
+    path('eventos', include('apps.eventos_app.urls')),
     #path('noticia/<int:id>/', views.detallenoticia, name='noticiasdetalle')
-] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT, show_indexes=True)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, show_indexes=True) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT, show_indexes=True)
