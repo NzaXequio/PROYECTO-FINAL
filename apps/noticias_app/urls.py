@@ -20,7 +20,7 @@ from django.conf import settings
 from apps.noticias_app import views
 
 urlpatterns = [
-    path('/<int:id>', views.detallenoticia, name='detalle-noticia'),
+    path('<int:id>', views.detallenoticia, name='detalle-noticia'),
     #path("noticias/new", views.CrearNoticiaView.as_view(), name='CrearNoticiaView'),
     #path('comentario/<int:id>/approve', views.comment_approve, name='comment_approve'),
     #path('comentario/<int:id>/remove', views.comment_remove, name='comment_remove'),
