@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block contenido %}
-{ % for noticia in noticias % }
+
             <div class="container-noticias">
                 <section class="textoeimagen">
                     <div class="textoeimagendiv">
@@ -15,8 +15,6 @@
                         </div>
                     </article>
 
-
-
                     <div class="imagendelmedio">
                     <img src="{{MEDIA_ROOT}}{{noticia.img}}" alt="niños"  width="350px" margin="50px">
                     </div>
@@ -24,6 +22,27 @@
                 
                 </div>
                     </div>
-{ % endfor % } 
+                    {% if user.is_authenticated %}
+                    <form method="POST">
+                      {% csrf_token %}
+                      {{form.as_p}}
+                      <button type="submit" class="btn_comentar">
+                        Comentar
+                      </button>
+                    </form>
+                    {% else %}
+                    <div class="Comentario">
+                      <p>
+                        <a href="/login" class="Titulo">Inicia sesion para comentar</a>
+                      </p>
+                    </div>
+                  
+                  {% endif %}
 
+              {% for comentario in comentarios %}
+              <div class="Comentario">
+              <p class="comentario-header">{{ comentario.autor}}<span class="Fecha"> {{ comentario.creado}}</span></p>
+              <p>{{ comentario.cuerpo_comentario}}</p>
+              </div>
+              {% endfor %}
 {% endblock %}
