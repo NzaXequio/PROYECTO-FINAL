@@ -113,6 +113,7 @@ button {
 }
 .botoneslogin{
     display: flex;
+    margin-top: 25px;
 }
 .botoneslogin button {
     background: #FFFFFF;

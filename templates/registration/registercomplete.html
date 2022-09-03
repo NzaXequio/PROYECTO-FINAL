@@ -6,7 +6,7 @@
       <h1>Tu usuario ha sido creado con exito</h1>
       <p class="lead">Si la página no es redirigida en 5 segundos pulsa <a href="{% url 'apps.blog_auth_app:login' %}">aquí</a></p>
    </div>
-</sectio>
+</section>
 <script>
    setTimeout(function(){ 
        window.location.replace("{% url 'apps.blog_auth_app:login' %}");
