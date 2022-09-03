@@ -25,4 +25,4 @@ urlpatterns = [
     #path('comentario/<int:id>/approve', views.comment_approve, name='comment_approve'),
     #path('comentario/<int:id>/remove', views.comment_remove, name='comment_remove'),
     path('', views.noticias, name='noticias'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, show_indexes=True) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT, show_indexes=True)
+]
