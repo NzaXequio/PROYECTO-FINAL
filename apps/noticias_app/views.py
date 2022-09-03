@@ -65,6 +65,9 @@ def conocenos(request):
 def eventos(request):
     return render(request,'eventos.html', {})
 
+def login(request):
+    return render(request,'login.html', {}) #
+
 
 @login_required
 def commentAproved(request, id):

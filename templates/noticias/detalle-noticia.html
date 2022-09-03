@@ -2,26 +2,30 @@
 {% load static %}
 
 {% block contenido %}
-
-            <div class="container-noticias">
+<link rel="stylesheet" href="{% static 'CSS/detalle-noticia.css' %}">
+<div class="barra">
+  <div class="triangulo"></div>
+  <h4>Noticias</h4>
+  </div>
+        <div class="container-noticias-detalle">
                 <section class="textoeimagen">
-                    <div class="textoeimagendiv">
+                  <div class="textoeimagendiv">
                     <article>
-                        <div class="tituloytexto"> 
+                      <div class="tituloytexto">
                         <div class="titulonoticia">
                             <p>{{noticia.titulo}}</p>
                         </div>
                         <p>{{noticia.contenido}}</p>
-                        </div>
+                      </div>
                     </article>
 
-                    <div class="imagendelmedio">
+                      <div class="imagendelmedio">
                     <img src="{{MEDIA_ROOT}}{{noticia.img}}" alt="niños"  width="350px" margin="50px">
-                    </div>
-                </div>
-                
-                </div>
-                    </div>
+                      </div>
+                  </div>
+                </section>
+              
+                    
                     {% if user.is_authenticated %}
                     <form method="POST">
                       {% csrf_token %}
@@ -33,16 +37,17 @@
                     {% else %}
                     <div class="Comentario">
                       <p>
-                        <a href="/login" class="Titulo">Inicia sesion para comentar</a>
+                        <a href="/registration/login" class="Titulo">Inicia sesion para comentar</a>
                       </p>
                     </div>
                   
                   {% endif %}
-
               {% for comentario in comentarios %}
               <div class="Comentario">
-              <p class="comentario-header">{{ comentario.autor}}<span class="Fecha"> {{ comentario.creado}}</span></p>
+              <strong><p class="comentario-header">{{ comentario.autor}}<span class="Fecha"> {{ comentario.creado}}</span></p></strong>
               <p>{{ comentario.cuerpo_comentario}}</p>
               </div>
               {% endfor %}
+
+          </div>
 {% endblock %}
