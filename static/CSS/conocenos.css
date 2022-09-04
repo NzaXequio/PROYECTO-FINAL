@@ -60,7 +60,7 @@ article img{
     width: 65%;
 }
 
- article h3{
+article h3{
     padding: 10px;
     font-weight:bold;
     background-color: white;
@@ -108,7 +108,7 @@ p.datos{
     font-size: 30px;
 }
 .container-form{
-    width: 100%;
+
     max-width: 108%;
     margin: auto;
     display: grid;
